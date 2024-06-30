@@ -8800,11 +8800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\abcde\\Desktop\\final_topic-main\\final_topic\\project_ver1\\project_ver1.csproj",
+      "projectUniqueName": "C:\\Users\\abcde\\Desktop\\final_topic\\project_ver1\\project_ver1.csproj",
       "projectName": "project_ver1",
-      "projectPath": "C:\\Users\\abcde\\Desktop\\final_topic-main\\final_topic\\project_ver1\\project_ver1.csproj",
+      "projectPath": "C:\\Users\\abcde\\Desktop\\final_topic\\project_ver1\\project_ver1.csproj",
       "packagesPath": "C:\\Users\\abcde\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\abcde\\Desktop\\final_topic-main\\final_topic\\project_ver1\\obj\\",
+      "outputPath": "C:\\Users\\abcde\\Desktop\\final_topic\\project_ver1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\abcde\\AppData\\Roaming\\NuGet\\NuGet.Config",
