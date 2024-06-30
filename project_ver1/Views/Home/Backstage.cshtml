@@ -1,0 +1,201 @@
+﻿@{
+    ViewData["Title"] = "Backstage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Backstage";
+}
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans|Maven+Pro:500' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<style>
+
+    .form-control {
+        width: 100%;
+        font-size: 20px;
+        padding: 10px 8px;
+    }
+
+    .mb-box {
+        width: 65%;
+        padding: 80px;
+        border-radius: 15px;
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 6px 6px 6px 2px gray;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    h5 {
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+    
+
+    .useheader {
+        font-weight: bold;
+        font-size: 35px;
+        background-color: #75ac06;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+    }
+   
+    .order {
+        position: relative;
+        top: -150px;
+        left: 40px;
+        text-decoration: none;
+        border: none;
+        padding: 5px;
+        width: 15%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        color: whitesmoke;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+        .order:hover {
+            background-color: gray;
+        }
+
+    .logout {
+        text-decoration: none;
+        border: none;
+        margin-left: 15px;
+         margin-right: 15px;
+        padding: 5px;
+        width:70%;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 25px;
+       background-color: #6A4028;
+    }
+
+    .logout:hover {
+    background-color:#563F2E;
+    color:white;
+}
+
+    .order_F {
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        padding: 5px;
+    }
+
+    .order_R {
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        padding: 5px;
+    }
+
+    .T-title:hover {
+        background-color: black;
+    }
+
+    .btn-custom {
+        background-color: #1B813E;
+        border-color: #1B813E;
+    }
+
+        .btn-custom:hover {
+            background-color: #7BA23F;
+            border-color: #7BA23F;
+        }
+
+       .sidebar {
+        width: 250px;
+        position: absolute;
+        
+        left: 0;
+        height: 100%;
+        background-color: #967249;
+        border-right: 1px solid #dee2e6;
+
+       
+    }
+
+        .sidebar a {
+            padding: 20px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            font-weight: bold;
+            font-size: 23px;
+            
+        }
+
+            .sidebar a:hover {
+                background-color: #7D532C;
+            }
+
+        .viewdes{
+        height: 1000px;
+        margin-left:300px;
+        margin-right: 100px;
+
+    }
+</style>
+
+
+<div style="height:1000px;">
+    <div class="sidebar"style="height:1000px;">
+    <a href="@Url.Action("Backstage", "Home")">員工主頁</a>
+    <a href="@Url.Action("BackstageContact", "Home")">顧客問題</a>
+    <a href="@Url.Action("BackstageProduct", "Home")">產品訂單</a>
+    <a href="@Url.Action("BackstageRoom", "Home")">訂房訂單</a>
+    <a href="@Url.Action("BackstageMember", "Home")">會員資料管理</a>
+    <br />
+    <br />
+    <form id="logoutForm" asp-action="Logout" asp-controller="Home" method="post">
+        <button type="submit" class="logout btn ">登出</button>
+    </form>
+
+</div>
+ <div class="viewdes">
+    <br />
+    <br />
+    <br />
+    <div class="mb-box">
+        <h3 class="text-center useheader">
+            員工資料
+        </h3>
+
+        <br><br>
+     
+            <div class="form-group">
+            <h1 style="font-weight: bold; font-size:45px;text-align: center;color:#26453D">
+                @Model.Name
+            </h1>
+            </div>
+             <br />
+            <div class="form-group">
+            <h5>員工ID:@Model.ID</h5>
+            </div>
+            <div class="form-group">
+            <h5>電話:@Model.Phone</h5>
+            </div>
+            <div class="form-group">
+            <h5>地址:@Model.Address</h5>
+            </div>
+            <div class="form-group">
+            <h5>電子信箱:@Model.Email</h5>
+            </div>
+            <div class="form-group">
+            <h5>所屬部門:@Model.Department</h5>
+            </div>
+            
+
+            </div>
+        
+        </<div>
+        </div>
+</div>
+</div
+</div>

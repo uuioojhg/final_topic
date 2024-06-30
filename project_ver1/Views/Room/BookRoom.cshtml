@@ -1,0 +1,35 @@
+﻿@model project_ver1.Models.Rooms
+
+@{
+    ViewData["Title"] = "Book Room";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var checkInDate = ViewBag.CheckInDate?.ToString("yyyy-MM-dd"); ;
+    var checkOutDate = ViewBag.CheckOutDate?.ToString("yyyy-MM-dd"); ;
+}
+
+<div class="container mt-5">
+    <h2>訂房資訊確認</h2>
+    <form method="post" action="/Room/ConfirmBooking">
+        <div class="form-group">
+            <label for="roomType">房間類別：</label>
+            <input type="text" class="form-control" id="roomType" value="@Model.Category.Name" readonly>
+        </div>
+        <div class="form-group">
+            <label for="checkInDate">入住日期：</label>
+            <input type="date" class="form-control" id="checkInDate" name="checkInDate" value="@checkInDate" readonly>
+        </div>
+        <div class="form-group">
+            <label for="checkOutDate">退房日期：</label>
+            <input type="date" class="form-control" id="checkOutDate" name="checkOutDate" value="@checkOutDate" readonly>
+        </div>
+        <div class="form-group">
+            <label for="roomId">房號：</label>
+            <input name="roomId" value="@Model.ID" readonly>
+        </div>
+        <div class="form-group">
+            <label for="Price">價格：</label>
+            <input name="Price" value="@Model.Price" readonly>
+        </div>
+        <button type="submit" class="btn btn-primary">確認訂房</button>
+    </form>
+</div>
